@@ -1,0 +1,42 @@
+@use "../../presets/" as *;
+@use "../../mixins/" as *;
+
+
+.navbar {
+  margin-bottom: 148px;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 23px;
+    margin-left: -10px;
+
+  }
+
+    &-link {
+      color: $color-black;
+      display: block;
+      padding: $gap-sm;
+      transition: scale 0.1s;
+      letter-spacing: $letter-spacing;
+    }
+}
+
+@include sm {
+  .navbar-list {
+    justify-content: center;
+    background-color: $color-gray-light;
+    position: fixed;
+    top: 0;
+    font-size: 22px;
+  }
+}
+
+.active {
+  color: $color-primary;
+}
+
+.navbar-link :hover {
+  /* color: var(--color-primary); */
+  scale: 1.1;
+}
